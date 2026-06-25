@@ -1,6 +1,6 @@
 from django.db import models
 
-from fcm_box/core/constants import PLATFORM_ANDROID, PLATFORM_CHOICES
+from fcm_box.core.constants import PLATFORM_ANDROID, PLATFORM_CHOICES
 from fcm_core.contrib.base_device import BaseFCMDevice
 
 
