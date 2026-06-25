@@ -1,5 +1,9 @@
+PLATFORM_ANDROID = "android"
+PLATFORM_IOS = "ios"
+PLATFORM_WEB = "web"
+
 PLATFORM_CHOICES = [
-    ("android", "Android"),
-    ("ios", "iOS"),
-    ("web", "Web"),
+    (PLATFORM_ANDROID, "Android"),
+    (PLATFORM_IOS, "iOS"),
+    (PLATFORM_WEB, "Web"),
 ]
