@@ -3,9 +3,19 @@ from typing import Any, Dict
 
 
 class BaseHTTPClient(ABC):
-    """Abstract base class handling common network configurations for HTTP clients."""
+    """Abstract base class handling common network configurations.
 
-    def __init__(self, base_url: str, headers: Dict[str, str], timeout: int = 5):
+    This class serves as the foundation for both synchronous and
+    asynchronous transport layers, ensuring strict adherence to the
+    Dependency Inversion Principle (DIP).
+    """
+
+    def __init__(
+        self,
+        base_url: str,
+        headers: Dict[str, str],
+        timeout: int = 5
+    ) -> None:
         """Initialize the HTTP client with network configurations.
 
         Args:
@@ -22,7 +32,8 @@ class BaseHTTPClient(ABC):
         """Execute a POST request against the designated endpoint.
 
         Args:
-            endpoint (str): API action destination path or direct complete URI.
-            json_data (dict): Primary object payload body transmitted inside request.
+            endpoint (str): API action destination path or full URI.
+            json_data (dict): Primary object payload body transmitted
+                inside the request.
         """
         pass
